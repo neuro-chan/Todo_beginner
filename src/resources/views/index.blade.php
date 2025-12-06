@@ -67,6 +67,8 @@
 
 {{-- 削除フォーム --}}
         <form class="delete-form" action="/todos/delete" method="POST">
+        @method('DELETE')
+        @csrf
           <input type="hidden" name="id" value="{{ $todo->id }}">
           <button class="delete-form__button-submit" type="submit">削除</button>
         </form>

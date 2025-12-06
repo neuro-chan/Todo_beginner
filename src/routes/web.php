@@ -27,3 +27,6 @@ Route::post('/todos', [TodoController::class, 'store']);
 
 // Todo更新
 Route::patch('/todos/update', [TodoController::class, 'update']);
+
+// Todo削除
+Route::delete('/todos/delete', [TodoController::class, 'destroy']);
