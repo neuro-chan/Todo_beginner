@@ -24,3 +24,6 @@ Route::get('/', [TodoController::class, 'index']);
 
 // Todo作成
 Route::post('/todos', [TodoController::class, 'store']);
+
+// Todo更新
+Route::patch('/todos/update', [TodoController::class, 'update']);
