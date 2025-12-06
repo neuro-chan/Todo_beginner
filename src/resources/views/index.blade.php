@@ -49,6 +49,8 @@
 
 {{-- 更新フォーム --}}
         <form class="update-form" action="/todos/update" method="POST">
+        @method('PATCH')
+        @csrf
           <div class="update-form__item">
             <input
               class="update-form__item-input"
