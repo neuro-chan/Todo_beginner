@@ -19,5 +19,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// 一覧表示のルート定義
+// Todo表示
 Route::get('/', [TodoController::class, 'index']);
+
+// Todo作成
+Route::post('/todos', [TodoController::class, 'store']);

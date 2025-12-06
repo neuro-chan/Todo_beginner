@@ -4,17 +4,33 @@
 <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 @endsection
 
-{{-- アラート表示 --}}
+{{-- アラート表示エリア --}}
 @section('content')
+
+@if(session('message') || $errors->any())
 <div class="todo__alert">
+  {{-- 成功メッセージ --}}
+  @if(session('message'))
   <div class="todo__alert--success">
-    Todoを作成しました
+    {{ session('message') }}
   </div>
+  @endif
+
+  {{-- エラーメッセージ --}}
+  @if($errors->any())
+  <div class="todo__alert--danger">
+    @foreach($errors->all() as $error)
+    <div class="error-item">{{ $error }}</div>
+    @endforeach
+  </div>
+  @endif
 </div>
+@endif
 
 {{-- Todo作成フォーム --}}
 <div class="todo__content">
-  <form class="create-form">
+  <form class="create-form" action="/todos" method="post">
+    @csrf
     <div class="create-form__item">
       <input class="create-form__item-input" type="text" name="content">
     </div>
