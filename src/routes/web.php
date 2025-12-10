@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TodoController;
+use App\Http\Controllers\CategoryController;
 
 
 /*
@@ -30,3 +31,6 @@ Route::patch('/todos/update', [TodoController::class, 'update']);
 
 // Todo削除
 Route::delete('/todos/delete', [TodoController::class, 'destroy']);
+
+// カテゴリ表示
+Route::get('/categories', [CategoryController::class, 'index']);
