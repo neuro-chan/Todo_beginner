@@ -1,4 +1,3 @@
-/* アラート */
 .todo__alert--success {
     padding: 10px 30px;
     border-color: #badbcc;
@@ -17,212 +16,143 @@
     margin: 0;
 }
 
-/* メインコンテンツ */
 .todo__content {
     margin: 0 auto;
-    padding: 60px 15px;
+    padding: 30px 15px;
     max-width: 1230px;
 }
 
-/* 作成フォーム */
-.create-form {
-    display: flex;
-    gap: 15px;
-    justify-content: space-between;
+.section__title {
     margin: 0 auto;
     width: 70%;
 }
 
-.create-form__item {
-    flex: 1;
-}
+.create-form,.search-form {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 70%;
+    text-align: center;
+    }
 
-.create-form__item-input {
-    padding: 10px 15px;
-    width: 100%;
-    height: 45px;
+
+.create-form__item,.search-form__item {
+    display: flex;
+    width: 70%;
+        }
+
+
+.create-form__item-input,.search-form__item-input {
+    margin-right: 10px;
+    padding: 10px;
+    width: 70%;
+    height: 40px;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: border-color 0.3s;
-}
+    border-radius: 3px;
+            }
 
-.create-form__item-input:focus {
-    outline: none;
-    border-color: #000;
-}
+.create-form__item-select, .search-form__item-select {
+    padding: 10px;
+    width: 30%;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    appearance: none;
 
-.create-form__item-input::placeholder {
-    color: #999;
-}
+            }
 
-.create-form__button {
-    flex-shrink: 0;
-}
+.create-form__button,.search-form__button {
+                    width: 20%;
+                }
 
-.create-form__button-submit {
-    padding: 10px 30px;
-    height: 45px;
+.create-form__button-submit,.search-form__button-submit {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     background: #000;
     color: #fff;
-    font-size: 16px;
-    font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
-    white-space: nowrap;
-}
+                    }
 
-.create-form__button-submit:hover {
-    background: #333;
-}
-
-/* Todoリスト */
-.todo-list {
-    margin: 40px auto 0;
+.todo-table {
+    margin: 30px auto;
     width: 70%;
-}
-
-.todo-list__header {
-    padding: 15px;
-    border-bottom: 1px solid #000;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.todo-list__items {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.todo-list__item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-    transition: background-color 0.2s;
-}
-
-.todo-list__item:hover {
-    background-color: #f9f9f9;
-}
-
-.todo-list__item--empty {
-    padding: 40px 15px;
     text-align: center;
-    color: #999;
-    font-size: 14px;
-}
+                    }
 
-/* 更新フォーム */
+.todo-table__inner {
+    width: 100%;
+                    }
+
+.todo-table__row {
+    border-bottom: 1px solid #ddd;
+                    }
+
+.todo-table__header {
+    padding: 12px;
+    width: 20%;
+    text-align: left;
+    font-weight: bold;
+                    }
+
+.todo-table__header-span {
+    margin-right: 40%;
+                    }
+
+.todo-table__item:first-of-type {
+    padding: 12px;
+    width: 90%;
+                    }
+
 .update-form {
     display: flex;
     align-items: center;
-    gap: 10px;
-    flex: 1;
-}
+    justify-content: space-between;
+                    }
 
-.update-form__item {
-    flex: 1;
-    min-width: 0;
-}
+ .update-form__item {
+    width: 40%;
+    line-height: 50%;
+                    }
 
 .update-form__item-input {
-    padding: 8px 12px;
     width: 100%;
-    border: 1px solid transparent;
-    border-radius: 3px;
-    font-size: 16px;
-    transition: border-color 0.3s, background-color 0.3s;
-}
-
-.update-form__item-input:focus {
     outline: none;
-    border-color: #0000ff;
-    background-color: #f0f8ff;
-}
+    border: none;
+                    }
+
+.update-form__item-p {
+    text-align: left;
+    font-size: 13px;
+                    }
 
 .update-form__button {
-    flex-shrink: 0;
-}
+    width: 50px;
+                    }
 
 .update-form__button-submit {
-    padding: 8px 20px;
-    min-width: 60px;
+    padding: 5px;
+    width: 100%;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     background: #0000ff;
     color: #fff;
-    font-size: 14px;
-    font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
-}
+                    }
 
-.update-form__button-submit:hover {
-    background: #0000cc;
-}
-
-/* 削除フォーム */
-.delete-form {
-    flex-shrink: 0;
-}
+ .delete-form__button {
+    width: 50px;
+                    }
 
 .delete-form__button-submit {
-    padding: 8px 20px;
-    min-width: 60px;
+    padding: 5px;
+    width: 100%;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     background: #ff0000;
     color: #fff;
-    font-size: 14px;
-    font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
-}
-
-.delete-form__button-submit:hover {
-    background: #cc0000;
-}
-
-/* レスポンシブ対応 */
-@media (max-width: 768px) {
-    .todo__content {
-        padding: 30px 15px;
-    }
-
-    .create-form,
-    .todo-list {
-        width: 100%;
-    }
-
-    .create-form {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .create-form__button-submit {
-        width: 100%;
-    }
-
-    .todo-list__item {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
-    }
-
-    .update-form {
-        width: 100%;
-    }
-
-    .delete-form {
-        width: 100%;
-    }
-
-    .delete-form__button-submit {
-        width: 100%;
-    }
-}
+                    }

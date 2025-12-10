@@ -34,3 +34,14 @@ Route::delete('/todos/delete', [TodoController::class, 'destroy']);
 
 // カテゴリ表示
 Route::get('/categories', [CategoryController::class, 'index']);
+
+// カテゴリ追加
+Route::post('/categories', [CategoryController::class, 'store']);
+
+// カテゴリ更新
+Route::patch('/categories/update', [CategoryController::class, 'update']);
+
+// カテゴリ削除
+Route::delete('/categories/delete', [CategoryController::class, 'destroy']);
+// Todo検索
+Route::get('/todos/search', [TodoController::class, 'search']);
